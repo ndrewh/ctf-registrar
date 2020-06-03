@@ -1,5 +1,5 @@
 class Jarmandy::BaseController < ApplicationController
-  before_filter :require_legitbs
+  before_action :require_legitbs
   layout 'jarmandy'
 
   PER_PAGE = 25
