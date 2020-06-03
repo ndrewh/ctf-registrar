@@ -1,5 +1,5 @@
 class HomepageController < ApplicationController
-  before_filter :require_logged_out
+  before_action :require_logged_out
 
   def index
   end

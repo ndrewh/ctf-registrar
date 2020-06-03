@@ -1,4 +1,4 @@
-class UpdateScoredChallengesOnChallengeChange < ActiveRecord::Migration
+class UpdateScoredChallengesOnChallengeChange < ActiveRecord::Migration[4.2]
   def up
     Solution.connection.execute <<-SQL
       CREATE TRIGGER scored_challenges_update_on_challenge_change

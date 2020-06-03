@@ -1,8 +1,8 @@
 class TeamsController < ApplicationController
-  before_filter :require_logged_in
-  before_filter :require_team, except: [:new, :create]
-  before_filter :require_no_team, only: %i{new create}
-  before_filter :require_before_or_during_game
+  before_action :require_logged_in
+  before_action :require_team, except: [:new, :create]
+  before_action :require_no_team, only: %i{new create}
+  before_action :require_before_or_during_game
 
   helper_method :team
 

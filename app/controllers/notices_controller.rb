@@ -1,5 +1,5 @@
 class NoticesController < ApplicationController
-  before_filter :require_on_team, except: :streamer
+  before_action :require_on_team, except: :streamer
 
   def index
     @notices = Notice.for current_team, params[:since]

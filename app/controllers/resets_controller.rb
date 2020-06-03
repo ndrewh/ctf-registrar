@@ -1,7 +1,7 @@
 class ResetsController < ApplicationController
-  before_filter :require_logged_in, only: %i{ index destroy }
-  before_filter :require_logged_out, only: %i{ new create show update }
-  before_filter :require_valid_token, only: %i{ show update }
+  before_action :require_logged_in, only: %i{ index destroy }
+  before_action :require_logged_out, only: %i{ new create show update }
+  before_action :require_valid_token, only: %i{ show update }
   def index
     @resets = current_user.resets
   end

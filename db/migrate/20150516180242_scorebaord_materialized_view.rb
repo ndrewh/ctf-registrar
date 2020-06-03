@@ -1,4 +1,4 @@
-class ScorebaordMaterializedView < ActiveRecord::Migration
+class ScorebaordMaterializedView < ActiveRecord::Migration[4.2]
   def up
     Team.connection.execute <<-SQL
       CREATE MATERIALIZED VIEW scoreboard AS

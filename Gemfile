@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.4.1'
+ruby '2.6.3'
 
-gem 'rails', '~> 5.0.2'
+gem 'rails', '~> 5.2.4.2'
 gem 'puma'
 
 gem 'neat'
@@ -27,7 +27,7 @@ gem 'validates_email_format_of'
 gem 'sass-rails',   '~> 5.0'
 gem 'coffee-rails', '~> 4.2'
 
-gem 'bourbon'
+gem 'bourbon', '~> 5.0.0'
 
 gem 'uglifier', '>= 1.0.3'
 
@@ -50,6 +50,8 @@ gem 'rails_12factor'
 
 gem 'marked-rails'
 gem 'jbuilder'
+
+gem 'bootsnap', require: false
 
 group :development do
   gem 'rails-erd'

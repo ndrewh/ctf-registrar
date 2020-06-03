@@ -1,4 +1,4 @@
-class ScoredChallengesMaterializedView < ActiveRecord::Migration
+class ScoredChallengesMaterializedView < ActiveRecord::Migration[4.2]
   def change
     Challenge.connection.execute <<-SQL
       CREATE MATERIALIZED VIEW scored_challenges AS

@@ -1,4 +1,4 @@
-class AddDisplayNameToScoreboard < ActiveRecord::Migration
+class AddDisplayNameToScoreboard < ActiveRecord::Migration[4.2]
   def up
     Team.connection.execute "DROP TRIGGER IF EXISTS scoreboard_update_trigger ON solutions"
     Team.connection.execute "DROP FUNCTION IF EXISTS scoreboard_refresh_proc()"

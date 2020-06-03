@@ -1,4 +1,4 @@
-class SolutionHistogramMaterializedView < ActiveRecord::Migration
+class SolutionHistogramMaterializedView < ActiveRecord::Migration[4.2]
   def up
     Solution.connection.execute <<-SQL
       CREATE MATERIALIZED VIEW solution_histogram AS

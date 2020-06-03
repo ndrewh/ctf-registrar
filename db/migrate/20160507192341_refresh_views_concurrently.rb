@@ -1,4 +1,4 @@
-class RefreshViewsConcurrently < ActiveRecord::Migration
+class RefreshViewsConcurrently < ActiveRecord::Migration[4.2]
   def up
     add_index :scoreboard, :team_id, unique: true
     add_index :solution_histogram, %i{challenge_id end_time}, unique: true

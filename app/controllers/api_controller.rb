@@ -1,5 +1,5 @@
 class ApiController < ApplicationController
-  before_filter :require_auth_param
+  before_action :require_auth_param
 
   def hot
     challenges = Challenge.for_picker(Team.find(1))

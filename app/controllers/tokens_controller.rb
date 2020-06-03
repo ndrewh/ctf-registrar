@@ -1,6 +1,6 @@
 class TokensController < ApplicationController
-  before_filter :require_logged_in
-  before_filter :require_no_token, only: %i{new create}
+  before_action :require_logged_in
+  before_action :require_no_token, only: %i{new create}
 
   def new
     @temporary_secret = ROTP::Base32.random_base32

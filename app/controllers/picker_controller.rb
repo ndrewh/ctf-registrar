@@ -1,6 +1,6 @@
 class PickerController < ApplicationController
-  before_filter :require_hot_team
-  before_filter :require_during_game
+  before_action :require_hot_team
+  before_action :require_during_game
 
   layout 'scoreboard'
 
